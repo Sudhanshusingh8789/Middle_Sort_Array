@@ -1,0 +1,20 @@
+ #include<iostream>
+ #include<vector>
+ #include<algorithm>
+ using namespace std;
+ int main(){
+     int n, elem;
+     cin>>n;
+     vector<int>arr;
+     for (int i = 0; i < n; i++){
+         cin >> elem;
+         arr.push_back(elem);
+     }
+     sort(arr.begin(), arr.end());
+     int mid = arr.size()/2;
+     if (arr.size() %2 == 1){
+         cout << "Middle = " << arr[mid] << endl;
+     }else{
+         cout << "Middle = " << arr[mid-1] << arr[mid] << endl;
+     }
+ }
